@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import { NextRequest, NextResponse } from 'next/server';
 import { calculateAvailability } from '@/lib/services/availability.service';
 import { isValid, parseISO } from 'date-fns';

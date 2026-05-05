@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import { prisma } from "@/lib/prisma";
 import { DollarSign, BedDouble, CalendarDays, Users } from "lucide-react";
 
