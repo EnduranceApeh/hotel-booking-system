@@ -1,0 +1,67 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  .theme {
+    --font-heading: var(--font-sans);
+    --font-sans: var(--font-sans);
+  }
+  :root {
+    --background: oklch(0.995 0.005 90);
+    --foreground: oklch(0.2 0.01 240);
+    --card: oklch(1 0 0);
+    --card-foreground: oklch(0.2 0.01 240);
+    --popover: oklch(1 0 0);
+    --popover-foreground: oklch(0.2 0.01 240);
+    --primary: oklch(0.65 0.15 75); /* Premium Gold/Bronze */
+    --primary-foreground: oklch(0.99 0 0);
+    --secondary: oklch(0.95 0.01 240); /* Soft cool slate */
+    --secondary-foreground: oklch(0.3 0.05 240);
+    --muted: oklch(0.95 0.01 240);
+    --muted-foreground: oklch(0.5 0.05 240);
+    --accent: oklch(0.95 0.01 240);
+    --accent-foreground: oklch(0.3 0.05 240);
+    --destructive: oklch(0.6 0.2 25);
+    --border: oklch(0.9 0.01 240);
+    --input: oklch(0.9 0.01 240);
+    --ring: oklch(0.65 0.15 75);
+    --radius: 0.3rem; /* Sharper corners for a premium feel */
+  }
+  .dark {
+    --background: oklch(0.15 0.02 240);
+    --foreground: oklch(0.95 0.01 240);
+    --card: oklch(0.2 0.02 240);
+    --card-foreground: oklch(0.95 0.01 240);
+    --popover: oklch(0.2 0.02 240);
+    --popover-foreground: oklch(0.95 0.01 240);
+    --primary: oklch(0.75 0.15 75); /* Lighter Gold/Bronze in dark mode */
+    --primary-foreground: oklch(0.2 0.01 240);
+    --secondary: oklch(0.3 0.05 240);
+    --secondary-foreground: oklch(0.95 0.01 240);
+    --muted: oklch(0.3 0.05 240);
+    --muted-foreground: oklch(0.7 0.05 240);
+    --accent: oklch(0.3 0.05 240);
+    --accent-foreground: oklch(0.95 0.01 240);
+    --destructive: oklch(0.6 0.2 25);
+    --border: oklch(0.3 0.02 240);
+    --input: oklch(0.3 0.02 240);
+    --ring: oklch(0.75 0.15 75);
+  }
+  * {
+    border-color: var(--border);
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+}
